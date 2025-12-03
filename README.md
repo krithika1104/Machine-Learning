@@ -32,6 +32,7 @@ Background monitoring thread for smooth UI
 
 └───────┬──────┘
         │
+        
 ┌───────▼────────┐     ┌──────────────────────┐
 
 │ Network Check  │◀──▶│ Data Storage (Dict) │
