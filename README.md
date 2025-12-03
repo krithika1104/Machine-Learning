@@ -2,6 +2,7 @@
 
 This project provides a real-time network monitoring tool that tracks latency, packet loss, and network speed with live updated graphs. It triggers alerts when thresholds are exceeded, helping users easily diagnose performance issues.
 
+
 🏷️ Badges
 
 | Category   | Badge                                                                         |
@@ -9,6 +10,7 @@ This project provides a real-time network monitoring tool that tracks latency, p
 | Language   | ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)                 |
 | Monitoring | ![Network Monitor](https://img.shields.io/badge/Network-Monitoring-green.svg) |
 | Status     | ![Active](https://img.shields.io/badge/Status-Active-success.svg)             |
+
 
 🚀 Features
 
@@ -25,17 +27,25 @@ Background monitoring thread for smooth UI
 🧠 Architecture
 
 ┌──────────────┐
+
 │  Scheduler   │ → Runs network checks every 2 sec
+
 └───────┬──────┘
         │
 ┌───────▼────────┐      ┌──────────────────────┐
+
 │ Network Check   │◀────▶│  Data Storage (Dict) │
+
 │ (ping + I/O)    │      └──────────────────────┘
+
 └───────┬────────┘
         │
 ┌───────▼────────┐
+
 │ Live Graph Plot │ → Updates Matplotlib chart
+
 └────────────────┘
+
 
 🧩 Function Breakdown
 
@@ -46,6 +56,7 @@ Background monitoring thread for smooth UI
 | `monitor_network()`   | Timestamp + runs above two functions + data trimming.                         |
 | `update_plot()`       | Refreshes live chart with new values.                                         |
 | `run_scheduler()`     | Schedules checks every 2 seconds using a thread.                              |
+
 
 📂 Project Structure
 
@@ -59,6 +70,7 @@ Background monitoring thread for smooth UI
 
 The graph window will open and auto-update — close it to stop monitoring.
 
+
 🎯 Optional Enhancements
 
 | Category       | Ideas                                         |
@@ -69,6 +81,7 @@ The graph window will open and auto-update — close it to stop monitoring.
 | Security       | Real-time firewall rule suggestions           |
 | Monitoring     | Multiple host support + selectable thresholds |
 | Smart Analysis | AI-based abnormal network behavior detection  |
+
 
 👩‍💻 Author
 
